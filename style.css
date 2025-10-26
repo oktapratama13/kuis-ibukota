@@ -1,0 +1,114 @@
+:root {
+  --bg: #000001;
+  --text: #e4e4e7;
+  --accent: #ec1b64;
+  --accent2: #eeebf5;
+  --correct: #00ff9d;
+  --wrong: #ff4d70;
+  --panel: #18181b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Fira Code", "Courier New", monospace;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  background-image: radial-gradient(
+      circle at 10% 20%,
+      rgba(167, 139, 250, 0.05) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 90% 80%,
+      rgba(255, 45, 117, 0.07) 0%,
+      transparent 25%
+    );
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 20px 0 10px;
+  text-shadow: 0 0 10px var(--accent);
+  letter-spacing: 1px;
+}
+
+.container p {
+  margin-bottom: 24px;
+  color: var(--accent2);
+  font-size: 0.95em;
+}
+
+#level-pilih button,
+button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 10px 20px;
+  margin: 8px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+#level-pilih button:hover,
+button:hover {
+  background: rgba(255, 45, 117, 0.15);
+  box-shadow: 0 0 12px rgba(255, 45, 117, 0.4);
+  transform: translateY(-2px);
+}
+
+input {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--accent2);
+  padding: 10px;
+  width: 220px;
+  margin: 12px 0;
+  font-family: inherit;
+  text-align: center;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(255, 45, 117, 0.5);
+}
+
+#hasil {
+  min-height: 24px;
+  margin: 12px 0;
+  font-weight: bold;
+}
+
+.correct {
+  color: var(--correct);
+  text-shadow: 0 0 8px rgba(0, 255, 157, 0.6);
+}
+.wrong {
+  color: var(--wrong);
+  text-shadow: 0 0 8px rgba(255, 77, 112, 0.5);
+}
+
+#skor {
+  color: var(--accent2);
+  font-weight: bold;
+}

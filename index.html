@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tebak Ibukota Negara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>🌍 Tebak Ibukota Negara</h1>
+      <p>Tebak Ibu Kota 193 Negara PBB</p>
+
+      <div id="level-pilih">
+        <button onclick="mulaiKuis('Mudah')">MUDAH</button>
+        <button onclick="mulaiKuis('Sedang')">SEDANG</button>
+        <button onclick="mulaiKuis('Sulit')">SULIT</button>
+        <button onclick="mulaiKuis('Acak')">ACAK</button>
+      </div>
+
+      <div id="kuis" style="display: none">
+        <h2 id="soal"></h2>
+        <input
+          type="text"
+          id="jawaban"
+          placeholder="Tulis jawaban..."
+          autocomplete="off"
+        />
+        <button onclick="cekJawaban()">CEK</button>
+        <p id="hasil"></p>
+        <p>Skor: <span id="skor">0</span> / <span id="total">0</span></p>
+      </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
